@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="programme.html">Programme</a></li>
+            <li><a href="Atlhètes.html">Athlètes</a></li>
+            <li><a href="sports.html">Sports</a></li>
+            <li><a href="infos.html">Infos</a></li>
+            <li><a href="billeterie.html">Billeterie</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+    </nav>
+
+    <nav class="fil-ariane">
+        <a href="index.html">Accueil</a>
+        <span> > </span>
+        <a href="billeterie.html">Billeterie</a>
+        <span> > </span>
+        <span>Réservation</span>
+    </nav>
+
+    <main>
+        <section class="reservation">
+            <h2>Réserver vos places</h2>
+            <form class="formulaire">
+                <div class="champ">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" placeholder="Votre nom">
+                </div>
+                <div class="champ">
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" placeholder="Votre prénom">
+                </div>
+                <div class="champ">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Votre email">
+                </div>
+                <div class="champ">
+                    <label for="billet">Type de billet</label>
+                    <select id="billet">
+                            <option value="">Choisissez un billet</option>
+                            <option value="journee">🎫 Ticket Journée — 25€</option>
+                            <option value="semaine">🎟️ Pass Semaine — 150€</option>
+                            <option value="vip">👑 Pass VIP — 500€</option>
+                    </select>
+                </div>
+                <div class="champ">
+                        <label for="places">Nombre de places</label>
+                        <input type="number" id="places" min="1" max="10" placeholder="1">
+                </div>
+                <button type="submit" class="bouton">Confirmer la réservation</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>©2026 Jeux Olympiques Milano-Cortina</p>
+        <div class="reseaux-sociaux">
+            <a href="#">Youtube</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+            <a href="#">Facebook</a>
+        </div>
+        <a href="mentions-legales.html">Mentions légales</a>
+    </footer>
+
+</body>
+</html>
