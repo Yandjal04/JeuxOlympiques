@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contactez l'équipe du site Jeux Olympiques – formulaire, réseaux sociaux et informations pratiques." />
+  <link rel="stylesheet" href="../CSS/contact.css" />
+  <title>Contact – Jeux Olympiques</title>
+</head>
+<body>
+
+  <!-- ── NAVIGATION ─────────────────────── -->
+  <nav class="navbar" aria-label="Navigation principale">
+    <a href="Acceuil.html" class="logo" aria-label="Retour à l'accueil OLY">OLY</a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="../Acceuil.html">Jeux Olympiques</a></li>
+      <li><a href="../Resevation/programme.html">Programme</a></li>
+      <li><a href="../Athlete/Atlhètes.html">Athlètes</a></li>
+      <li><a href="../Sports/sport.html">Sports</a></li>
+      <li><a href="info.html">Infos</a></li>
+      <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+      
+
+    </ul>
+  </nav>
+
+  <!-- ── HERO ───────────────────────────── -->
+  <header class="hero" role="banner">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-lines" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <span class="hero-tag">Contact</span>
+      <h1>Prenez<br /><span>contact avec nous</span></h1>
+      <p class="hero-sub">Une question, une suggestion ou un partenariat ? Notre équipe vous répond dans les plus brefs délais.</p>
+    </div>
+  </header>
+
+  <!-- ── MAIN ───────────────────────────── -->
+  <main id="main-content">
+    <div class="page-content">
+
+      <!-- ── FORMULAIRE ───────────────── -->
+      <section aria-labelledby="form-title">
+        <div class="form-card">
+          <h2 class="form-card-title" id="form-title">Envoyez-nous un message</h2>
+          <p class="form-card-sub">Tous les champs marqués <span style="color:#c8962a">*</span> sont obligatoires.</p>
+          <div class="form-divider" aria-hidden="true"></div>
+
+          <form id="contactForm" novalidate action="#" method="post" aria-label="Formulaire de contact">
+
+            <!-- Nom / Prénom -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="prenom">Prénom <span class="required" aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="prenom"
+                  name="prenom"
+                  autocomplete="given-name"
+                  placeholder="Ex : Marie"
+                  required
+                  aria-required="true"
+                />
+              </div>
+              <div class="form-group">
+                <label for="nom">Nom <span class="required" aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="nom"
+                  name="nom"
+                  autocomplete="family-name"
+                  placeholder="Ex : Dupont"
+                  required
+                  aria-required="true"
+                />
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label for="email">Adresse e-mail <span class="required" aria-hidden="true">*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                placeholder="marie.dupont@exemple.fr"
+                required
+                aria-required="true"
+                aria-describedby="email-hint"
+              />
+              <p id="email-hint" style="font-size:0.78rem; color:#8a9bb0; margin-top:5px;">
+                Votre email ne sera jamais partagé.
+              </p>
+            </div>
+
+            <!-- Téléphone (optionnel) -->
+            <div class="form-group">
+              <label for="telephone">Téléphone <span style="color:#8a9bb0; font-weight:400; text-transform:none; letter-spacing:0;">(optionnel)</span></label>
+              <input
+                type="tel"
+                id="telephone"
+                name="telephone"
+                autocomplete="tel"
+                placeholder="+33 6 12 34 56 78"
+              />
+            </div>
+
+            <!-- Sujet -->
+            <div class="form-group">
+              <label for="sujet">Sujet de votre message <span class="required" aria-hidden="true">*</span></label>
+              <select id="sujet" name="sujet" required aria-required="true">
+                <option value="" disabled selected>Choisissez un sujet…</option>
+                <option value="question">Question générale</option>
+                <option value="info">Demande d'information</option>
+                <option value="partenariat">Partenariat / Collaboration</option>
+                <option value="media">Presse / Médias</option>
+                <option value="erreur">Signaler une erreur</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group">
+              <label for="message">Votre message <span class="required" aria-hidden="true">*</span></label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Décrivez votre demande en quelques mots…"
+                required
+                aria-required="true"
+                minlength="10"
+                aria-describedby="message-hint"
+              ></textarea>
+              <p id="message-hint" style="font-size:0.78rem; color:#8a9bb0; margin-top:5px;">
+                Minimum 10 caractères.
+              </p>
+            </div>
+
+            <!-- Centres d'intérêt (optionnel) -->
+            <div class="form-group">
+              <label as="legend">Centres d'intérêt olympiques <span style="color:#8a9bb0; font-weight:400; text-transform:none; letter-spacing:0;">(optionnel)</span></label>
+              <div class="checkbox-group" role="group" aria-label="Sélectionnez vos centres d'intérêt olympiques">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="interets" value="hiver" />
+                  Jeux Olympiques d'hiver
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="interets" value="ete" />
+                  Jeux Olympiques d'été
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="interets" value="athletes" />
+                  Athlètes & palmarès
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="interets" value="histoire" />
+                  Histoire du mouvement olympique
+                </label>
+              </div>
+            </div>
+
+            <!-- RGPD -->
+            <div class="form-group">
+              <label class="checkbox-label" style="align-items:flex-start;">
+                <input
+                  type="checkbox"
+                  name="rgpd"
+                  id="rgpd"
+                  required
+                  aria-required="true"
+                  style="margin-top:3px;"
+                />
+                <span>
+                  J'accepte que mes données soient utilisées pour répondre à ma demande, conformément à la
+                  <a href="#" style="color:#0077cc;">politique de confidentialité</a>. <span class="required" aria-hidden="true">*</span>
+                </span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn-submit" aria-label="Envoyer le formulaire de contact">
+              Envoyer le message ✈
+            </button>
+          </form>
+
+          <!-- Message de succès (affiché après soumission JS) -->
+          <div class="form-success" id="formSuccess" role="alert" aria-live="polite">
+            <div class="icon" aria-hidden="true">🏅</div>
+            <h3>Message envoyé !</h3>
+            <p>Merci pour votre message. Notre équipe vous répondra dans les plus brefs délais.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SIDEBAR ───────────────────── -->
+      <aside aria-label="Informations de contact">
+        <div class="sidebar">
+
+          <!-- Coordonnées -->
+          <div class="info-bloc">
+            <h3><span class="icon" aria-hidden="true">📍</span> Notre équipe</h3>
+            <address>
+              Lycée [Nom de l'établissement]<br />
+              [Adresse de l'établissement]<br />
+              [Code postal] [Ville], France<br /><br />
+              <a href="mailto:contact@jeux-olympiques.fr">contact@jeux-olympiques.fr</a>
+            </address>
+          </div>
+
+          <!-- Horaires de réponse -->
+          <div class="info-bloc">
+            <h3><span class="icon" aria-hidden="true">🕐</span> Délai de réponse</h3>
+            <p>
+              Lundi – Vendredi : 8h00 – 18h00<br />
+              Weekends & jours fériés : délai possible.<br /><br />
+              Nous vous répondons généralement <strong>sous 48h</strong> ouvrées.
+            </p>
+          </div>
+
+          <!-- Réseaux sociaux -->
+          <div class="info-bloc">
+            <h3><span class="icon" aria-hidden="true">🌐</span> Suivez-nous</h3>
+            <p style="margin-bottom:14px;">Retrouvez nos dernières actualités sur les réseaux :</p>
+            <div class="social-links">
+              <a href="#" class="social-btn" aria-label="Suivre sur Instagram">📸 Instagram</a>
+              <a href="#" class="social-btn" aria-label="Suivre sur X (Twitter)">𝕏 Twitter / X</a>
+              <a href="#" class="social-btn" aria-label="Suivre sur YouTube">▶ YouTube</a>
+              <a href="#" class="social-btn" aria-label="Suivre sur Facebook">f Facebook</a>
+            </div>
+          </div>
+
+          <!-- Map placeholder -->
+          <div class="info-bloc" style="padding-bottom: 0; border: none; box-shadow: none; background: transparent; padding: 0;">
+            <div class="map-placeholder" role="img" aria-label="Carte de localisation à insérer">
+              <span class="placeholder-icon" aria-hidden="true">🗺️</span>
+              <span class="placeholder-label">📌 Carte à insérer</span>
+            </div>
+          </div>
+
+        </div>
+      </aside>
+    </div>
+
+    <!-- ── FAQ ──────────────────────────── -->
+    <section class="faq-section" aria-labelledby="faq-title">
+      <div class="section-label">
+        <div class="bar" aria-hidden="true"></div>
+        <h2 id="faq-title">Questions fréquentes</h2>
+      </div>
+
+      <div class="faq-grid">
+
+        <details class="faq-item">
+          <summary>À quelle fréquence les Jeux ont-ils lieu ?</summary>
+          <p class="faq-answer">
+            Les Jeux Olympiques d'été et d'hiver se tiennent chacun tous les 4 ans. Depuis 1994, ils ont lieu en alternance, soit un événement olympique tous les 2 ans.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Quand auront lieu les prochains Jeux d'hiver ?</summary>
+          <p class="faq-answer">
+            Les prochains Jeux Olympiques d'hiver se dérouleront à Milano Cortina, en Italie, du 6 au 22 février 2026.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Comment les pays hôtes sont-ils choisis ?</summary>
+          <p class="faq-answer">
+            Le Comité International Olympique (CIO) sélectionne les villes candidates selon des critères de capacité d'accueil, d'infrastructure, de durabilité et d'héritage olympique.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Qui peut participer aux Jeux Olympiques ?</summary>
+          <p class="faq-answer">
+            Tout athlète qualifié selon les critères de sa fédération internationale et sélectionné par son comité national olympique peut participer, sans discrimination d'âge, de sexe ou de nationalité.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Combien y a-t-il de sports aux JO d'hiver ?</summary>
+          <p class="faq-answer">
+            Les Jeux Olympiques d'hiver comprennent actuellement 15 sports regroupés en plus de 100 épreuves, incluant le ski alpin, le biathlon, le patinage ou encore le curling.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Comment envoyer un partenariat ou une proposition ?</summary>
+          <p class="faq-answer">
+            Utilisez le formulaire de contact ci-dessus en sélectionnant « Partenariat / Collaboration » comme sujet. Détaillez votre proposition et nous vous répondrons sous 48h ouvrées.
+          </p>
+        </details>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ── FOOTER ──────────────────────────── -->
+  <footer role="contentinfo">
+    <p>© 2026 Jeux Olympiques — Projet scolaire | <a href="info.html">Informations</a></p>
+  </footer>
+
+  <!-- ── JS : Gestion formulaire ──────────── -->
+  <script>
+    const form = document.getElementById('contactForm');
+    const successMsg = document.getElementById('formSuccess');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Validation minimale
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      // Simuler l'envoi
+      form.style.transition = 'opacity 0.4s';
+      form.style.opacity = '0';
+      setTimeout(() => {
+        form.style.display = 'none';
+        successMsg.style.display = 'block';
+      }, 400);
+    });
+  </script>
+
+</body>
+</html>

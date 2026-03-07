@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Informations sur les Jeux Olympiques – histoire, sports, dates clés et actualités." />
+  <link rel="stylesheet" href="../CSS/info.css" />
+  <title>Informations – Jeux Olympiques</title>
+</head>
+<body>
+
+  <!-- ── NAVIGATION ─────────────────────── -->
+  <nav class="navbar" aria-label="Navigation principale">
+    <a href="Acceuil.html" class="logo" aria-label="Retour à l'accueil OLY">OLY</a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="Acceuil.html">Jeux Olympiques</a></li>
+      <li><a href="../Resevation/programme.html">Programme</a></li>
+      <li><a href="../Athlete/Atlhètes.html">Athlètes</a></li>
+      <li><a href="../Sports/sport.html">Sports</a></li>
+      <li><a href="info.html" class="active" aria-current="page">Infos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="../Resevation/reservation.html">Réservation</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO ───────────────────────────── -->
+  <header class="hero" role="banner">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-rings" aria-hidden="true">
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+    </div>
+
+    <div class="hero-content">
+      <span class="hero-tag">Informations</span>
+      <h1>Tout savoir sur les<br /><span>Jeux Olympiques</span></h1>
+      <p class="hero-sub">Histoire, sports, disciplines et moments clés qui font la légende olympique.</p>
+    </div>
+  </header>
+
+  <!-- ── STATS BAND ──────────────────────── -->
+  <main id="main-content">
+    <section class="page-content" style="display:block; padding-bottom: 0;" aria-label="Chiffres clés">
+      <div class="stats-band" role="list">
+        <div class="stat-item" role="listitem">
+          <span class="stat-number" aria-label="206 pays participants">206</span>
+          <span class="stat-label">Nations participantes</span>
+        </div>
+        <div class="stat-item" role="listitem">
+          <span class="stat-number">32</span>
+          <span class="stat-label">Sports aux JO d'été</span>
+        </div>
+        <div class="stat-item" role="listitem">
+          <span class="stat-number">15</span>
+          <span class="stat-label">Sports aux JO d'hiver</span>
+        </div>
+        <div class="stat-item" role="listitem">
+          <span class="stat-number">1896</span>
+          <span class="stat-label">Première édition moderne</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ARTICLE FEATURED ─────────────── -->
+    <section class="page-content" style="display:block;" aria-labelledby="featured-title">
+      <div class="section">
+        <div class="section-label">
+          <div class="bar" aria-hidden="true"></div>
+          <h2 id="featured-title">À la une</h2>
+        </div>
+
+        <article class="featured-article">
+          <!-- Image placeholder -->
+          <div class="featured-img-holder" role="img" aria-label="Image à insérer – Cérémonie d'ouverture">
+            <span class="placeholder-icon" aria-hidden="true">🏟️</span>
+            <span class="placeholder-text">📸 Image à insérer<br>Cérémonie d'ouverture</span>
+          </div>
+
+          <div class="featured-text">
+            <span class="card-category">Événement phare</span>
+            <h3>La cérémonie d'ouverture : naissance de la flamme olympique</h3>
+            <p>Depuis Athènes 1896, la cérémonie d'ouverture symbolise l'unité des nations sous les cinq anneaux. Un spectacle de plusieurs heures mêlant tradition, culture du pays hôte et message de paix universelle.</p>
+            <a href="#" class="card-link" aria-label="Lire l'article complet sur la cérémonie d'ouverture">Lire l'article</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- ── CARTES INFO ─────────────────── -->
+      <div class="section" aria-labelledby="section-actu">
+        <div class="section-label">
+          <div class="bar" aria-hidden="true"></div>
+          <h2 id="section-actu">Actualités & Dossiers</h2>
+        </div>
+
+        <div class="cards-grid">
+
+          <!-- Carte 1 -->
+          <article class="info-card">
+            <div class="card-img-holder" role="img" aria-label="Image à insérer – Histoire des Jeux Olympiques">
+              <span class="placeholder-icon" aria-hidden="true">🏛️</span>
+              <span class="placeholder-text">📸 Image à insérer</span>
+            </div>
+            <div class="card-body">
+              <span class="card-category">Histoire</span>
+              <h3>Des jeux antiques à l'ère moderne</h3>
+              <p>Nés en Grèce antique en 776 av. J.-C., les Jeux Olympiques ont été relancés par Pierre de Coubertin en 1896. Découvrez l'évolution fascinante de cet événement planétaire.</p>
+              <a href="#" class="card-link" aria-label="En savoir plus sur l'histoire des Jeux Olympiques">En savoir plus</a>
+            </div>
+          </article>
+
+          <!-- Carte 2 -->
+          <article class="info-card">
+            <div class="card-img-holder" role="img" aria-label="Image à insérer – Sports olympiques">
+              <span class="placeholder-icon" aria-hidden="true">🎿</span>
+              <span class="placeholder-text">📸 Image à insérer</span>
+            </div>
+            <div class="card-body">
+              <span class="card-category">Sports</span>
+              <h3>Les disciplines olympiques d'hiver</h3>
+              <p>Ski alpin, biathlon, patinage artistique, curling… Explorez les 15 sports des Jeux d'hiver, leurs règles et les athlètes qui les ont rendus légendaires.</p>
+              <a href="#" class="card-link" aria-label="Découvrir les sports olympiques d'hiver">Découvrir les sports</a>
+            </div>
+          </article>
+
+          <!-- Carte 3 -->
+          <article class="info-card">
+            <div class="card-img-holder" role="img" aria-label="Image à insérer – Valeurs olympiques">
+              <span class="placeholder-icon" aria-hidden="true">🕊️</span>
+              <span class="placeholder-text">📸 Image à insérer</span>
+            </div>
+            <div class="card-body">
+              <span class="card-category">Valeurs</span>
+              <h3>Excellence, Respect, Amitié</h3>
+              <p>Les trois valeurs fondamentales du mouvement olympique guident chaque athlète et nation participante. Comprendre leur signification profonde et leur portée mondiale.</p>
+              <a href="#" class="card-link" aria-label="En savoir plus sur les valeurs olympiques">En savoir plus</a>
+            </div>
+          </article>
+
+          <!-- Carte 4 -->
+          <article class="info-card">
+            <div class="card-img-holder" role="img" aria-label="Image à insérer – Médailles olympiques">
+              <span class="placeholder-icon" aria-hidden="true">🥇</span>
+              <span class="placeholder-text">📸 Image à insérer</span>
+            </div>
+            <div class="card-body">
+              <span class="card-category">Palmarès</span>
+              <h3>Le tableau des médailles : nations et records</h3>
+              <p>Qui domine le classement historique des médailles ? Quels pays se distinguent aux Jeux d'hiver ? Statistiques et infographies sur les grandes nations olympiques.</p>
+              <a href="#" class="card-link" aria-label="Voir le palmarès et tableau des médailles">Voir le palmarès</a>
+            </div>
+          </article>
+
+          <!-- Carte 5 -->
+          <article class="info-card">
+            <div class="card-img-holder" role="img" aria-label="Image à insérer – Flamme olympique">
+              <span class="placeholder-icon" aria-hidden="true">🔥</span>
+              <span class="placeholder-text">📸 Image à insérer</span>
+            </div>
+            <div class="card-body">
+              <span class="card-category">Symboles</span>
+              <h3>La flamme et les symboles olympiques</h3>
+              <p>Les cinq anneaux, la flamme, la devise « Citius, Altius, Fortius » : derrière chaque symbole se cache une histoire riche en sens et en tradition.</p>
+              <a href="#" class="card-link" aria-label="Explorer les symboles olympiques">Explorer les symboles</a>
+            </div>
+          </article>
+
+          <!-- Carte 6 -->
+          <article class="info-card">
+            <div class="card-img-holder" role="img" aria-label="Image à insérer – Milano Cortina 2026">
+              <span class="placeholder-icon" aria-hidden="true">⛷️</span>
+              <span class="placeholder-text">📸 Image à insérer</span>
+            </div>
+            <div class="card-body">
+              <span class="card-category">Milano Cortina 2026</span>
+              <h3>Prochains Jeux : Milano Cortina 2026</h3>
+              <p>Les XXVe Jeux Olympiques d'hiver se tiendront en Italie du 6 au 22 février 2026. Milan, Cortina d'Ampezzo et plusieurs autres sites alpins accueilleront le monde.</p>
+              <a href="#" class="card-link" aria-label="Tout savoir sur Milano Cortina 2026">Tout savoir</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ── TIMELINE ────────────────────── -->
+      <div class="section" aria-labelledby="section-timeline">
+        <div class="section-label">
+          <div class="bar" aria-hidden="true"></div>
+          <h2 id="section-timeline">Dates clés de l'olympisme</h2>
+        </div>
+
+        <div class="timeline" role="list">
+          <div class="timeline-item" role="listitem">
+            <p class="timeline-date">776 av. J.-C.</p>
+            <h3 class="timeline-title">Premiers Jeux antiques à Olympie</h3>
+            <p class="timeline-desc">Les premiers Jeux Olympiques de l'Antiquité sont célébrés dans la cité grecque d'Olympie, en l'honneur de Zeus.</p>
+          </div>
+
+          <div class="timeline-item" role="listitem">
+            <p class="timeline-date">6 Avril 1896</p>
+            <h3 class="timeline-title">Naissance des Jeux modernes à Athènes</h3>
+            <p class="timeline-desc">Pierre de Coubertin ressuscite la tradition olympique. 14 nations et 241 athlètes participent à la première édition moderne.</p>
+          </div>
+
+          <div class="timeline-item" role="listitem">
+            <p class="timeline-date">1924</p>
+            <h3 class="timeline-title">Création des Jeux Olympiques d'hiver</h3>
+            <p class="timeline-desc">Chamonix (France) accueille les premiers Jeux Olympiques d'hiver. Le ski nordique et le patinage dominent le programme.</p>
+          </div>
+
+          <div class="timeline-item" role="listitem">
+            <p class="timeline-date">1968</p>
+            <h3 class="timeline-title">Grenoble : les premiers JO télévisés en couleur</h3>
+            <p class="timeline-desc">La France accueille les Jeux d'hiver. Pour la première fois, les épreuves sont retransmises en couleur dans le monde entier.</p>
+          </div>
+
+          <div class="timeline-item" role="listitem">
+            <p class="timeline-date">Février 2026</p>
+            <h3 class="timeline-title">Milano Cortina 2026</h3>
+            <p class="timeline-desc">L'Italie accueille les XXVe Jeux Olympiques d'hiver sur plusieurs sites, dont Milan et les Dolomites.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ── FOOTER ──────────────────────────── -->
+  <footer role="contentinfo">
+    <p>© 2026 Jeux Olympiques — Projet scolaire | <a href="contact.html">Contactez-nous</a></p>
+  </footer>
+
+</body>
+</html>
