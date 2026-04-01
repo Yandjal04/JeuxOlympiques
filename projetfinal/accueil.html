@@ -1,0 +1,100 @@
+<!--Répartition du travail:
+Natacha: athletes.html; afrique.html; asie.html;
+Badr: amerique.html; oceanie.html; europe.html;
+Bilel: athletisme.html; aviron.html; badminton.html;
+Paul: info.html; contact.html; sport.html
+Haroun basketball.html; golf.html; natation.html;
+Daniel: programme.html; reservation.html; billeterie.html;
+accueil.html, css en commun-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="contact.css">
+  <link rel ="icon" href="athlete/images/icone.webp">
+  <title>Jeux Olympiques Milano-Cortina 2026</title>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="accueil.html" class="logo">OLY</a>
+  <ul class="nav-links">
+    <li><a href="accueil.html" class="active">Accueil</a></li>
+    <li><a href="reservation/programme.html">Programme</a></li>
+    <li><a href="athlete/athletes.html">Athlètes</a></li>
+    <li><a href="sports/sport.html">Sports</a></li>
+    <li><a href="info/info.html">Infos</a></li>
+    <li><a href="info/contact.html">Contact</a></li>
+    <li><a href="reservation/billeterie.html" >Billetterie</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-lines" aria-hidden="true"></div>
+  <div class="hero-content">
+    <span class="hero-tag">Milano-Cortina 2026</span>
+    <h1>Jeux<br><span>Olympiques d'hiver</span></h1>
+    <p class="hero-sub">6 – 22 février 2026 · Italie · Découvrez les athlètes, les épreuves et réservez vos places.</p>
+    <div style="display:flex;gap:16px;margin-top:28px;flex-wrap:wrap;">
+      <a href="athlete/athletes.html" style="display:inline-block;background:#c8962a;color:#050f1f;padding:14px 32px;border-radius:4px;text-decoration:none;font-weight:700;font-size:0.9rem;letter-spacing:1.5px;text-transform:uppercase;transition:all 0.3s ease;">Voir les athlètes</a>
+      <a href="reservation/billeterie.html" style="display:inline-block;background:transparent;color:white;padding:14px 32px;border-radius:4px;text-decoration:none;font-weight:700;font-size:0.9rem;letter-spacing:1.5px;text-transform:uppercase;border:2px solid rgba(255,255,255,0.4);transition:all 0.3s ease;">Réserver des billets</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Chiffres clés -->
+<section style="background:#050f1f;padding:50px 40px;">
+    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;">
+      <div><span style="font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:900;color:#e8b84b;display:block;">16</span><span style="font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.5);">Jours de compétition</span></div>
+      <div><span style="font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:900;color:#e8b84b;display:block;">15</span><span style="font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.5);">Sports</span></div>
+      <div><span style="font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:900;color:#e8b84b;display:block;">90+</span><span style="font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.5);">Nations</span></div>
+      <div><span style="font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:900;color:#e8b84b;display:block;">2026</span><span style="font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.5);">Édition</span></div>
+    </div>
+  </section>
+
+  <!-- Liens rapides -->
+  <section style="max-width:1100px;margin:0 auto;padding:70px 40px;">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:40px;">
+      <div style="width:4px;height:36px;background:linear-gradient(to bottom,#c8962a,#0057a8);border-radius:4px;"></div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:700;color:#0d1e35;">Jeux à venir</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+      <a href="athlete/athletes.html" style="display:flex;flex-direction:column;background:white;border-radius:8px;padding:32px;text-decoration:none;box-shadow:0 8px 40px rgba(0,87,168,0.1);border-top:4px solid #c8962a;transition:transform 0.3s ease;">
+        <span style="font-size:2.5rem;margin-bottom:12px;">🏅</span>
+        <h3 style="font-family:'Playfair Display',serif;color:#050f1f;font-size:1.2rem;margin-bottom:8px;">Les Athlètes</h3>
+        <p style="color:#8a9bb0;font-size:0.9rem;">Découvrez les athlètes participants par continent</p>
+      </a>
+      <a href="reservation/programme.html" style="display:flex;flex-direction:column;background:white;border-radius:8px;padding:32px;text-decoration:none;box-shadow:0 8px 40px rgba(0,87,168,0.1);border-top:4px solid #0057a8;transition:transform 0.3s ease;">
+        <span style="font-size:2.5rem;margin-bottom:12px;">📅</span>
+        <h3 style="font-family:'Playfair Display',serif;color:#050f1f;font-size:1.2rem;margin-bottom:8px;">Programme</h3>
+        <p style="color:#8a9bb0;font-size:0.9rem;">Toutes les épreuves et leurs horaires</p>
+      </a>
+      <a href="sports/sport.html" style="display:flex;flex-direction:column;background:white;border-radius:8px;padding:32px;text-decoration:none;box-shadow:0 8px 40px rgba(0,87,168,0.1);border-top:4px solid #c8962a;transition:transform 0.3s ease;">
+        <span style="font-size:2.5rem;margin-bottom:12px;">⛷️</span>
+        <h3 style="font-family:'Playfair Display',serif;color:#050f1f;font-size:1.2rem;margin-bottom:8px;">Les Sports</h3>
+        <p style="color:#8a9bb0;font-size:0.9rem;">Explorez toutes les disciplines olympiques</p>
+      </a>
+      <a href="reservation/billeterie.html" style="display:flex;flex-direction:column;background:white;border-radius:8px;padding:32px;text-decoration:none;box-shadow:0 8px 40px rgba(0,87,168,0.1);border-top:4px solid #0057a8;transition:transform 0.3s ease;">
+        <span style="font-size:2.5rem;margin-bottom:12px;">🎫</span>
+        <h3 style="font-family:'Playfair Display',serif;color:#050f1f;font-size:1.2rem;margin-bottom:8px;">Billetterie</h3>
+        <p style="color:#8a9bb0;font-size:0.9rem;">Réservez vos places dès maintenant</p>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>©2026 Jeux Olympiques Milano-Cortina — Projet scolaire</p>
+  <div class="reseaux-sociaux">
+    <a href="https://www.youtube.com/@Olympics">Youtube</a><a href="https://www.instagram.com/olympics/">Instagram</a><a href="https://x.com/Olympics">Twitter</a><a href="https://www.facebook.com/olympics/">Facebook</a>
+  </div>
+  <a href="info/contact.html">Contact</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,785 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Barlow:ital,wght@0,300;0,400;0,600;1,300&display=swap');
+
+/* ══════════════════════════════════════════
+   VARIABLES GLOBALES
+══════════════════════════════════════════ */
+:root {
+  --navy:       #050f1f;
+  --blue:       #0057a8;
+  --blue-mid:   #0077cc;
+  --ice:        #e8f4ff;
+  --gold:       #c8962a;
+  --gold-light: #e8b84b;
+  --white:      #ffffff;
+  --gray-soft:  #f4f7fb;
+  --gray-mid:   #8a9bb0;
+  --text-dark:  #0d1e35;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Barlow', sans-serif;
+
+  --radius:     6px;
+  --shadow:     0 8px 40px rgba(0, 87, 168, 0.13);
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ══════════════════════════════════════════
+   RESET
+══════════════════════════════════════════ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--gray-soft);
+  color: var(--text-dark);
+  overflow-x: hidden;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main { flex: 1; }
+
+/* ══════════════════════════════════════════
+   NAVBAR
+══════════════════════════════════════════ */
+.navbar,
+nav:not(.fil-ariane) {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 64px;
+  background: var(--navy);
+  border-bottom: 2px solid var(--gold);
+}
+
+/* Logo OLY */
+.navbar .logo,
+nav:not(.fil-ariane) > a.logo {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--gold);
+  text-decoration: none;
+  letter-spacing: 3px;
+}
+
+/* Liste de liens navbar */
+.nav-links,
+nav:not(.fil-ariane) ul {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links a,
+nav:not(.fil-ariane) ul a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: color var(--transition);
+  padding: 4px 0;
+}
+
+.nav-links a:hover,
+nav:not(.fil-ariane) ul a:hover,
+.nav-links a.active,
+nav:not(.fil-ariane) ul a.active {
+  color: var(--gold-light);
+}
+
+.nav-links a.active,
+nav:not(.fil-ariane) ul a.active {
+  border-bottom: 2px solid var(--gold-light);
+}
+
+/* ══════════════════════════════════════════
+   FIL D'ARIANE
+══════════════════════════════════════════ */
+nav.fil-ariane {
+  background: #eef3fb;
+  padding: 10px 50px;
+  font-size: 0.85rem;
+  border-bottom: 1px solid #d5e3f0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+nav.fil-ariane a {
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav.fil-ariane a:hover { color: var(--gold); }
+
+nav.fil-ariane span {
+  color: var(--gray-mid);
+}
+
+/* ══════════════════════════════════════════
+   HERO — version navbar-style (info/contact)
+══════════════════════════════════════════ */
+header.hero,
+.hero-header {
+  position: relative;
+  background: var(--navy);
+  padding: 80px 60px 70px;
+  overflow: hidden;
+}
+
+/* Hero — version simple (pages Athlete/Reservation) */
+section.hero {
+  background: linear-gradient(135deg, #050f1f 20%, #0077cc 50%, #050f1f 80%);
+  min-height: 42vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+section.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 50%, rgba(200,150,42,0.15) 0%, transparent 60%);
+}
+
+.hero-contenu {
+  color: white;
+  z-index: 1;
+  position: relative;
+  padding: 40px 20px;
+}
+
+.hero-contenu h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.hero-contenu p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  opacity: 0.85;
+}
+
+.hero-contenu::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--gold);
+  margin: 20px auto 0;
+  border-radius: 2px;
+}
+
+/* Hero décoratif (info/contact) */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 80% 50%, rgba(0,119,204,0.3) 0%, transparent 60%),
+    radial-gradient(ellipse at 0% 100%, rgba(200,150,42,0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 700px;
+  animation: fadeUp 0.8s ease both;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+.hero-content h1,
+header.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.1;
+}
+
+.hero-content h1 span { color: var(--gold-light); font-style: italic; }
+
+.hero-sub {
+  margin-top: 14px;
+  color: rgba(255,255,255,0.6);
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/* ══════════════════════════════════════════
+   PAYS (pages athlètes)
+══════════════════════════════════════════ */
+.pays {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px 36px;
+  margin: 0 auto 24px;
+  max-width: 900px;
+  border-left: 4px solid var(--gold);
+  animation: fadeUp 0.5s ease both;
+}
+
+.pays h2 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.pays h3 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 14px 0 6px;
+}
+
+.pays p {
+  color: #4a5f7a;
+  font-size: 0.95rem;
+  padding: 3px 0;
+}
+
+/* ══════════════════════════════════════════
+   SECTION ATHLÈTES (index continent)
+══════════════════════════════════════════ */
+main > section:not(.hero) {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 40px;
+}
+
+main > section:not(.hero) p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--white);
+  padding: 18px 28px;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 12px rgba(0,87,168,0.08);
+  margin-bottom: 4px;
+  border-left: 4px solid var(--blue);
+  transition: border-color var(--transition);
+}
+
+main > section:not(.hero) p:hover {
+  border-left-color: var(--gold);
+}
+
+/* ══════════════════════════════════════════
+   BOUTONS
+══════════════════════════════════════════ */
+.bouton,
+a.bouton {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  padding: 10px 26px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all var(--transition);
+  margin-top: 12px;
+}
+
+.bouton:hover {
+  background: var(--navy);
+  color: var(--gold-light);
+}
+
+/* ══════════════════════════════════════════
+   TARIFS (billeterie)
+══════════════════════════════════════════ */
+.tarifs {
+  padding: 70px 50px;
+  background: var(--gray-soft);
+  text-align: center;
+}
+
+.tarifs h2 {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+.tarifs-cartes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.tarif-carte {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 40px 30px;
+  width: 280px;
+  box-shadow: var(--shadow);
+  border-top: 5px solid var(--blue);
+  transition: transform var(--transition);
+}
+
+.tarif-carte:hover { transform: translateY(-8px); }
+
+.tarif-carte.vip {
+  border-top: 5px solid var(--gold);
+  background: var(--navy);
+  color: white;
+}
+
+.tarif-carte.vip h3,
+.tarif-carte.vip li { color: white; }
+
+.prix {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--gold);
+  margin: 15px 0;
+}
+
+.tarif-carte h3 {
+  font-size: 1.3rem;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.tarif-carte ul {
+  list-style: none;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.tarif-carte ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.tarif-carte ul li::before {
+  content: '✓ ';
+  color: var(--gold);
+  font-weight: bold;
+}
+
+/* ══════════════════════════════════════════
+   INFOS PRATIQUES
+══════════════════════════════════════════ */
+.infos-pratiques {
+  padding: 70px 50px;
+  background: var(--navy);
+  text-align: center;
+}
+
+.infos-pratiques h2 {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+.infos-grille {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.info-carte {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 30px;
+  width: 250px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  transition: transform var(--transition);
+}
+
+.info-carte:hover { transform: translateY(-8px); }
+.info-carte span { font-size: 2.5rem; }
+.info-carte h3 { color: var(--blue); font-size: 1.1rem; margin: 10px 0; }
+.info-carte p { color: #555; font-size: 0.9rem; }
+.info-carte a { color: var(--blue); font-weight: 600; }
+
+/* ══════════════════════════════════════════
+   ÉPREUVES (programme)
+══════════════════════════════════════════ */
+.epreuves {
+  padding: 70px 50px;
+  background: var(--gray-soft);
+  text-align: center;
+}
+
+.epreuves h2 {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.bouton-pdf {
+  display: inline-block;
+  margin: 20px 0 40px;
+  background: var(--blue);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all var(--transition);
+}
+
+.bouton-pdf:hover { background: var(--gold); color: var(--navy); }
+
+.epreuves-grille {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+}
+
+.epreuve-carte {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 30px;
+  width: 260px;
+  box-shadow: var(--shadow);
+  border-top: 5px solid var(--gold);
+  transition: transform var(--transition);
+}
+
+.epreuve-carte:hover { transform: translateY(-8px); }
+
+.epreuve-carte .emoji { font-size: 2.5rem; display: block; margin-bottom: 10px; }
+
+.epreuve-carte h3 { color: var(--navy); font-size: 1.1rem; margin-bottom: 12px; }
+.epreuve-carte p { font-size: 0.9rem; color: #555; margin-bottom: 4px; }
+
+/* ══════════════════════════════════════════
+   RÉSERVATION
+══════════════════════════════════════════ */
+.reservation {
+  padding: 70px 50px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.reservation h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.formulaire {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.champ {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.champ label {
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.champ input,
+.champ select {
+  padding: 12px 16px;
+  border: 2px solid #d5e3f0;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  transition: border var(--transition);
+  background: var(--gray-soft);
+}
+
+.champ input:focus,
+.champ select:focus {
+  border-color: var(--blue-mid);
+  outline: none;
+  background: white;
+}
+
+/* ══════════════════════════════════════════
+   SPORTS (pages individuelles)
+══════════════════════════════════════════ */
+.sport-content {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 50px 40px 80px;
+  background: var(--white);
+  animation: fadeUp 0.6s ease both;
+}
+
+.sport-content h1 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--navy);
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 3px solid var(--gold);
+}
+
+.sport-content h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--blue);
+  margin: 36px 0 12px;
+}
+
+.sport-content h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 20px 0 8px;
+}
+
+.sport-content p {
+  color: #4a5f7a;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.sport-content ul {
+  margin: 8px 0 16px 20px;
+  color: #4a5f7a;
+  font-size: 0.95rem;
+  line-height: 2;
+}
+
+.sport-content hr {
+  border: none;
+  border-top: 1px solid #e0eaf5;
+  margin: 32px 0;
+}
+
+.sport-content a[href] {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--blue);
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: color var(--transition);
+}
+
+.sport-content a[href]:hover { color: var(--gold); }
+
+/* ══════════════════════════════════════════
+   SPORT INDEX
+══════════════════════════════════════════ */
+.sports-index {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 40px 80px;
+}
+
+.sports-index h1 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.sports-index > p {
+  color: var(--gray-mid);
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+.sports-index h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--gold);
+  margin: 32px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--ice);
+}
+
+.sports-index ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sports-index ul li a {
+  display: flex;
+  align-items: center;
+  padding: 14px 20px;
+  background: var(--white);
+  border-radius: var(--radius);
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 10px rgba(0,87,168,0.07);
+  border-left: 3px solid transparent;
+  transition: all var(--transition);
+}
+
+.sports-index ul li a:hover {
+  border-left-color: var(--gold);
+  color: var(--blue);
+  transform: translateX(4px);
+}
+
+/* ══════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════ */
+footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.55);
+  text-align: center;
+  padding: 32px 40px;
+  font-size: 0.85rem;
+  border-top: 2px solid var(--gold);
+  margin-top: auto;
+}
+
+footer p { opacity: 0.8; margin-bottom: 10px; }
+
+.reseaux-sociaux {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 14px 0;
+}
+
+.reseaux-sociaux a,
+footer a {
+  color: var(--gold-light);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: opacity var(--transition);
+}
+
+.reseaux-sociaux a:hover,
+footer a:hover { opacity: 0.7; }
+
+/* ══════════════════════════════════════════
+   ANIMATIONS
+══════════════════════════════════════════ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .navbar,
+  nav:not(.fil-ariane) {
+    padding: 0 20px;
+    height: 56px;
+  }
+
+  .nav-links,
+  nav:not(.fil-ariane) ul { gap: 14px; }
+
+  .nav-links a,
+  nav:not(.fil-ariane) ul a { font-size: 0.72rem; letter-spacing: 0.8px; }
+
+  section.hero { min-height: 35vh; }
+  .hero-contenu h1 { font-size: 1.8rem; letter-spacing: 1px; }
+
+  .pays { padding: 20px; margin: 0 16px 16px; }
+
+  .tarifs, .epreuves, .infos-pratiques, .reservation { padding: 50px 20px; }
+
+  nav.fil-ariane { padding: 10px 20px; }
+
+  .sport-content, .sports-index { padding: 30px 20px 60px; }
+
+  .formulaire { padding: 24px 20px; }
+}
+
+@media (max-width: 480px) {
+  .nav-links,
+  nav:not(.fil-ariane) ul { 
+    display: none; 
+  }
+  
+  .navbar::after,
+  nav:not(.fil-ariane)::after {
+    content: '☰';
+    color: var(--gold);
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+}
